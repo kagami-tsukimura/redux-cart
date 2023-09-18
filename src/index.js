@@ -9,6 +9,14 @@ const actionType = {
   DECREMENT: 'DECREMENT',
 };
 
+const incrementDispatch = () => {
+  store.dispatch(increment());
+};
+
+const decrementDispatch = () => {
+  store.dispatch(decrement());
+};
+
 // TODO: actions: increment, decrement
 const increment = () => {
   return {
@@ -37,9 +45,16 @@ const counterReducer = (state = 0, action) => {
 // TODO: store
 let store = createStore(counterReducer);
 
+store.subscribe(() => console.log(store.getState()));
+
+// TODO: dispatch
+store.dispatch(decrement());
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    <button onClick={incrementDispatch}>{actionType.INCREMENT}</button>
+    <button onClick={decrementDispatch}>{actionType.DECREMENT}</button>
   </React.StrictMode>
 );
