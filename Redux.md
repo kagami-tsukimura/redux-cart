@@ -49,3 +49,28 @@ Redux でページの画面を変更する。
 ![Image](https://user-images.githubusercontent.com/113032853/268547801-bdb29500-9a8c-426d-a887-a6c3376fc13a.gif)
 
 > Quoted from <https://redux.js.org/tutorials/essentials/part-1-overview-concepts>
+
+処理の流れ
+
+1. State：状態
+
+   - ex. $0
+
+2. UI：Button
+
+   - Deposit $10：ボタンを押して+$10 する。
+     - Action 実行。
+
+3. Dispatch：Action を Store に通知
+
+   - Event Handler：Event(Deposit $10)を処理する。
+
+4. Store：1 箇所で状態を管理し、どの Component でも使えるようにする。
+
+   - Global に扱う。
+   - Reducer：State（以前の状態） を Action（新しい状態） に更新。
+     - Action と State を同時に取得する。
+       - Action：Event(Deposit $10)）が Reducer に遷移する。
+       - State：以前の状態（$0）が Reducer に遷移する。
+     - R：Reducer 内のロジック
+   - State：$0→$10 に更新。
