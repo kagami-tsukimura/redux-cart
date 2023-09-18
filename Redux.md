@@ -45,3 +45,7 @@ Redux でページの画面を変更する。
   - 保守性に優れる。
 
 ### Redux の仕組み
+
+![Image](https://user-images.githubusercontent.com/113032853/268547801-bdb29500-9a8c-426d-a887-a6c3376fc13a.gif)
+
+> Quoted from https://redux.js.org/tutorials/essentials/part-1-overview-concepts
