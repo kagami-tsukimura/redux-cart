@@ -1,11 +1,11 @@
 import React from 'react';
 import { decrement, increment } from '../actions';
 
-const ActionButton = ({ dispatch }) => {
+const ActionButton = ({ dispatch, value }) => {
   return (
     <div>
-      <button onClick={() => dispatch(increment())}>+</button>
-      <button onClick={() => dispatch(decrement())}>-</button>
+      <button onClick={() => dispatch(increment(Number(value)))}>+</button>
+      <button onClick={() => dispatch(decrement(Number(value)))}>-</button>
     </div>
   );
 };
