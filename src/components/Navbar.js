@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className='navbar-center'>
+      <div className='nav-center'>
         <h3>Redux Shopping</h3>
         <div className='nav-container'>
           ロゴ
