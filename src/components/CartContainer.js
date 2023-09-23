@@ -17,15 +17,13 @@ const CartContainer = () => {
             <h2>買い物かご</h2>
             <h4 className='empty-cart'>何も入っていません・・・🐧</h4>
           </header>
-        </section>
-        <footer>
           <button
             className='btn restore-btn'
             onClick={() => dispatch(openRestoreModal())}
           >
-            中身を復元する
+            復元する
           </button>
-        </footer>
+        </section>
       </>
     );
   }
