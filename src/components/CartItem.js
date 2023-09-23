@@ -14,6 +14,9 @@ const CartItem = ({ id, img, title, price, amount }) => {
         <button className='remove-btn' onClick={() => dispatch(removeItem(id))}>
           削除
         </button>
+        {/* <a href={img} download={`penguin_${id}.png`}>
+          <button>画像をダウンロード</button>
+        </a> */}
       </div>
       <div>
         <button className='amount-btn' onClick={() => dispatch(increase(id))}>
