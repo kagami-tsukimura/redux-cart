@@ -1,9 +1,9 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { clearCart } from '../features/cart/CartSlice';
-import { closeModal } from '../features/modal/ModalSlice';
+import { closeDeleteModal } from '../features/modal/ModalSlice';
 
-const Modal = () => {
+const DeleteModal = () => {
   const dispatch = useDispatch();
   return (
     <aside className='modal-container'>
@@ -14,14 +14,14 @@ const Modal = () => {
             className='btn confirm-btn'
             onClick={() => {
               dispatch(clearCart());
-              dispatch(closeModal());
+              dispatch(closeDeleteModal());
             }}
           >
             OK
           </button>
           <button
             className='btn clear-btn'
-            onClick={() => dispatch(closeModal())}
+            onClick={() => dispatch(closeDeleteModal())}
           >
             やめておく
           </button>
@@ -31,4 +31,4 @@ const Modal = () => {
   );
 };
 
-export default Modal;
+export default DeleteModal;
