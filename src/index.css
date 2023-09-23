@@ -194,7 +194,8 @@ Cart
   margin-top: 1rem;
 }
 .clear-btn,
-.confirm-btn {
+.confirm-btn,
+.restore-btn {
   background: transparent;
   padding: 0.5rem 1rem;
   color: var(--color-red-dark);
@@ -210,6 +211,10 @@ Cart
 .confirm-btn {
   border-color: var(--color-primary);
   color: var(--color-primary);
+}
+.restore-btn {
+  display: block;
+  margin: auto;
 }
 
 /*
