@@ -1,27 +1,27 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { clearCart } from '../features/cart/CartSlice';
-import { closeModal } from '../features/modal/ModalSlice';
+import { closeRestoreModal } from '../features/modal/ModalSlice';
 
-const Modal = () => {
+const RestoreModal = () => {
   const dispatch = useDispatch();
   return (
     <aside className='modal-container'>
       <div className='modal'>
-        <h4>買い物かごをすべて空にしますか？</h4>
+        <h4>買い物かごを復元しますか？</h4>
         <div className='btn-container'>
           <button
             className='btn confirm-btn'
             onClick={() => {
               dispatch(clearCart());
-              dispatch(closeModal());
+              dispatch(closeRestoreModal());
             }}
           >
-            OK
+            復元する
           </button>
           <button
             className='btn clear-btn'
-            onClick={() => dispatch(closeModal())}
+            onClick={() => dispatch(closeRestoreModal())}
           >
             やめておく
           </button>
@@ -31,4 +31,4 @@ const Modal = () => {
   );
 };
 
-export default Modal;
+export default RestoreModal;
